@@ -169,6 +169,8 @@ h1 span{display:block}
 .proj p{margin:14px 0 0;color:var(--muted);max-width:34em}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .tag{padding:3px 11px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:600;font-size:.72rem}
+.status{display:inline-block;margin-top:10px;padding:3px 11px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:600;font-size:.72rem}
+.status.pause{background:var(--amber-tint);color:var(--amber-ink)}
 .ai{font-size:.8rem;margin-top:14px!important}
 .proj .btn{margin-top:20px}
 .mock{position:relative;border-radius:26px;background:var(--m-bg);border:1px solid var(--line);padding:18px;min-height:290px;overflow:hidden}
@@ -401,6 +403,7 @@ footer{margin-top:clamp(64px,9vw,110px);padding:26px 0 36px;border-top:1px solid
     </div>
     <div>
       <h3>Gestion Pro</h3>
+      <span class="status" data-i18n="st_wip">En cours d'amélioration : tests et corrections mineures (erreurs, affichage)</span>
       <p data-i18n="g_d">Outil de gestion du travail à la tâche : missions libres, cinq types de mission (saisie de fiches, contrôle qualité, tâche administrative, demande d'aide, tâche web), suivi À faire / En cours / À valider, validation par le responsable, messagerie, calendrier et fil d'actualité.</p>
       <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></div>
       <p class="ai" data-i18n="ai_note">Réalisé avec l'aide d'outils d'IA.</p>
@@ -429,6 +432,7 @@ footer{margin-top:clamp(64px,9vw,110px);padding:26px 0 36px;border-top:1px solid
     </div>
     <div>
       <h3>DF-boosting</h3>
+      <span class="status pause" data-i18n="st_pause">Projet en pause</span>
       <p data-i18n="d_d">Outil de gestion d'équipe et de suivi du travail à la tâche (contexte jeu vidéo) : grille de postes, sessions, justificatifs photo, validation par l'administrateur, avances, calendrier de présence et messagerie.</p>
       <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span></div>
       <p class="ai" data-i18n="ai_note">Réalisé avec l'aide d'outils d'IA.</p>
@@ -444,13 +448,14 @@ footer{margin-top:clamp(64px,9vw,110px);padding:26px 0 36px;border-top:1px solid
           <div class="bub me"><svg class="ic"><use href="#i-check"/></svg><span data-i18n="nv_a">Bien dit</span></div>
           <div class="mic"><svg class="ic"><use href="#i-mic"/></svg></div>
           <div class="wave" aria-hidden="true"><b style="--d:0s"></b><b style="--d:.12s"></b><b style="--d:.24s"></b><b style="--d:.36s"></b><b style="--d:.48s"></b><b style="--d:.36s"></b><b style="--d:.24s"></b><b style="--d:.12s"></b><b style="--d:0s"></b></div>
-          <div class="langs"><b>FR</b><b>EN</b><b>ES</b><b>DE</b><b>MG</b></div>
+          <div class="langs"><b>FR</b><b>EN</b><b>ZH</b></div>
         </div>
         <span class="mock-cap" data-i18n="mock_note">Aperçu illustré</span>
       </div>
     </div>
     <div>
       <h3>Nova Language Coach</h3>
+      <span class="status" data-i18n="st_wip">En cours d'amélioration : tests et corrections mineures (erreurs, affichage)</span>
       <p data-i18n="n_d">Application d'apprentissage des langues avec un coach IA : test de niveau, leçons, quiz, exercices oraux avec le micro, profil de progression, en trois langues (français, anglais, chinois).</p>
       <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">IA</span></div>
       <p class="ai" data-i18n="ai_note">Réalisé avec l'aide d'outils d'IA.</p>
@@ -521,7 +526,7 @@ footer{margin-top:clamp(64px,9vw,110px);padding:26px 0 36px;border-top:1px solid
       g_d:"Outil de gestion du travail à la tâche : missions libres, cinq types de mission (saisie de fiches, contrôle qualité, tâche administrative, demande d'aide, tâche web), suivi À faire / En cours / À valider, validation par le responsable, messagerie, calendrier et fil d'actualité.",
       d_d:"Outil de gestion d'équipe et de suivi du travail à la tâche (contexte jeu vidéo) : grille de postes, sessions, justificatifs photo, validation par l'administrateur, avances, calendrier de présence et messagerie.",
       n_d:"Application d'apprentissage des langues avec un coach IA : test de niveau, leçons, quiz, exercices oraux avec le micro, profil de progression, en trois langues (français, anglais, chinois).",
-      ai_note:"Réalisé avec l'aide d'outils d'IA.",see_site:"Voir le site",mock_note:"Aperçu illustré",
+      ai_note:"Réalisé avec l'aide d'outils d'IA.",st_wip:"En cours d'amélioration : tests et corrections mineures (erreurs, affichage)",st_pause:"Projet en pause",see_site:"Voir le site",mock_note:"Aperçu illustré",
       kb_todo:"À faire",kb_doing:"En cours",kb_check:"À valider",df_title:"Grille des postes",
       nv_q:"Répète : « Bonjour, comment allez-vous ? »",nv_a:"Bien dit",
       contact_t:"Contact",contact_intro:"Disponible pour un entretien ou un test pratique.",
@@ -562,7 +567,7 @@ footer{margin-top:clamp(64px,9vw,110px);padding:26px 0 36px;border-top:1px solid
       g_d:"Task-based work management tool: free-form missions, five mission types (data entry, quality control, administrative task, help request, web task), To do / In progress / To validate tracking, manager validation, messaging, calendar and news feed.",
       d_d:"Team management and task-based work tracking tool (video game context): workstation grid, sessions, photo proofs, admin validation, advances, attendance calendar and messaging.",
       n_d:"Language learning app with an AI coach: placement test, lessons, quizzes, spoken exercises with the microphone, progress profile, in three languages (French, English, Chinese).",
-      ai_note:"Built with the help of AI tools.",see_site:"View the site",mock_note:"Illustrated preview",
+      ai_note:"Built with the help of AI tools.",st_wip:"Ongoing improvements: testing and minor fixes (errors, display)",st_pause:"Project on hold",see_site:"View the site",mock_note:"Illustrated preview",
       kb_todo:"To do",kb_doing:"In progress",kb_check:"To validate",df_title:"Workstation grid",
       nv_q:"Repeat: “Hello, how are you?”",nv_a:"Well said",
       contact_t:"Contact",contact_intro:"Available for an interview or a practical test.",
